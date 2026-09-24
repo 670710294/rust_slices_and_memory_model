@@ -1,9 +1,9 @@
 # Rust Tutorial Project — Principles of Programming Languages
 
 > **สำหรับนักศึกษา:** ใช้ไฟล์นี้เป็น Template สำหรับจัดทำบทเรียน Rust ของกลุ่ม  
-> **Topic No.:** `XX`  
-> **Topic Name:** `[ชื่อหัวข้อ]`  
-> **Group No.:** `XX`
+> **Topic No.:** `13`  
+> **Topic Name:** `[Slices & Memory Model]`  
+> **Group No.:** `13`
 
 ---
 
@@ -11,10 +11,10 @@
 
 | # | Name | Student ID | GitHub Username | Main Responsibility |
 |---|---|---|---|---|
-| 1 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Concept + Code |
-| 2 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Code + Demo |
-| 3 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Rust vs Other Language + PPL |
-| 4 | `[ชื่อ-นามสกุล]` | `[รหัส]` | `@[username]` | Exercises + Common Mistakes |
+| 1 | `นายปภังกร มงคลนรกิจ` | `670710295` | `@[username]` | Concept + Code |
+| 2 | `นางสาวศิริกานต์ หรุ่นมาบแค` | `[670710294` | `@670710294` | Code + Demo |
+| 3 | `นายสิรวิชญ์ เชี่ยวชาญ` | `670610296` | `@[username]` | Rust vs Other Language + PPL |
+| 4 | `นายวีรภัทร พุฒหอม` | `670710336` | `@[username]` | Exercises + Common Mistakes |
 
 ---
 
