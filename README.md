@@ -1,4 +1,4 @@
-# แปะ source/refference ในนี้ได้เลยครับ
+# แปะ source/reference ในนี้ได้เลยครับ
 
 [Slices]
 1) https://doc.rust-lang.org/std/primitive.slice.html
