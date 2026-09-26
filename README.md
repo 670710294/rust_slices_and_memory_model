@@ -8,3 +8,5 @@
 [Memory Model]
 1) https://doc.rust-lang.org/reference/memory-model.html
 2) https://www.youtube.com/watch?v=XGtWsfnnvh0
+3) https://youtu.be/5C_HPTJg5ek?si=ZECyVfxclD8En_e3
+4) https://youtu.be/-6cnnNlAvNk?si=LZkhB-gzByWZduGw
