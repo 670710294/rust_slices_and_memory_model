@@ -5,7 +5,6 @@
 2) https://doc.rust-lang.org/book/ch04-03-slices.html
 3) https://www.youtube.com/watch?v=a4o-kR2ixGc
 4) https://doc.rust-lang.org/nomicon/exotic-sizes.html
-5) https://doc.rust-lang.org/std/primitive.slice.html
 
 [Memory Model]
 1) https://doc.rust-lang.org/reference/memory-model.html
