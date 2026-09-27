@@ -88,33 +88,43 @@ fn main (){
 
 //chunk แบ่งเป็นก้อนเท่าๆกัน
 fn main(){
+
     let data = [1, 2, 3, 4, 5, 6, 7];
     for chunk in data.chunks(3) {
-    println!("{:?}", chunk);
+        println!("{:?}", chunk);
     }
     // [1, 2, 3]
     // [4, 5, 6]
     // [7]          <- เหลือไม่ครบก็เอาเท่าที่มี
-
+    
     let mut chunks_iter = data.chunks_exact(3); //ตัดก้อนที่ไม่ครบออก
     for chunk in &mut chunks_iter {
         println!("{:?}", chunk);
     }
 
     println!("เหลือไม่ครบ: {:?}", chunks_iter.remainder()); // [7]
+
+    //as_chunks
+    let (chunks, remainder) = data.as_chunks::<3>();
+    println!("{:?}", chunks);    // [[1, 2, 3], [4, 5, 6]]
+    println!("{:?}", remainder); // [7]
 }
 
 //windows เลื่อนหน้าต่างทีละ 1
 fn main(){
-    let data = [1, 2, 3, 4, 5, 6, 7];
-    for w in data.windows(3) {
+    let data = [1, 2, 3, 4, 5];
+    for w in data.windows(2) {
         println!("{:?}", w);
     }
-    // [1, 2, 3]
-    // [2, 3, 4]
-    // [3, 4, 5]
-    // [4, 5, 6]
-    // [5, 6, 7]
+    // [1, 2]
+    // [2, 3]
+    // [3, 4]
+    // [4, 5]
+
+    //array_windows
+    let mut iter = data.array_windows::<2>();
+    println!("{:?}", iter.next()); // Some(&[1, 2])
+    println!("{:?}", iter.next()); // Some(&[2, 3])
 }
 
 //Pattern Matching ดูค่าหัวท้าย(ไม่สนใจค่ากลาง)
@@ -129,30 +139,16 @@ fn main() {
 
 //iter() vs iter_mut()
 fn main(){
+    let data = &[1, 2, 4];
     // iter() = แค่ดู ห้ามแก้
     for n in data.iter() {
         println!("{}", n);
     }
 
     // iter_mut() = ดูแล้วแก้ค่าได้เลย
-    let mut nums = [1, 2, 3];
+    let data = &mut [1, 2, 4];
     for n in nums.iter_mut() {
-        *n *= 10; // ต้องมี * ข้างหน้าเวลาจะแก้ค่า
+        *n += 2; // ต้องมี * ข้างหน้าเวลาจะแก้ค่า
     }
-    // nums กลายเป็น [10, 20, 30]
-}
-
-//การ slice array 2 มิติ
-fn main() {
-    let matrix = [
-        [1, 2, 3], // แถว 0
-        [4, 5, 6], // แถว 1
-        [7, 8, 9], // แถว 2
-    ];
-
-    // ดึงเอาเฉพาะ แถวที่ 0 ถึง แถวที่ 1 (ไม่รวมแถวที่ 2)
-    let row_slice: &[[i32; 3]] = &matrix[0..2];
-
-    println!("{:?}", row_slice); 
-    // ผลลัพธ์: [[1, 2, 3], [4, 5, 6]]
+    // nums กลายเป็น [3, 4, 6]
 }
