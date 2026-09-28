@@ -14,3 +14,4 @@
 5) https://doc.rust-lang.org/std/marker/trait.Copy.html
 6) https://doc.rust-lang.org/std/primitive.str.html
 7) https://doc.rust-lang.org/book/ch08-02-strings.html
+8) https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/the-stack-and-the-heap.html
