@@ -15,3 +15,4 @@
 6) https://doc.rust-lang.org/std/primitive.str.html
 7) https://doc.rust-lang.org/book/ch08-02-strings.html
 8) https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/the-stack-and-the-heap.html
+9) https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#the-stack-and-the-heap
