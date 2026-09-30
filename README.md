@@ -16,3 +16,5 @@
 7) https://doc.rust-lang.org/book/ch08-02-strings.html
 8) https://web.mit.edu/rust-lang_v1.25/arch/amd64_ubuntu1404/share/doc/rust/html/book/first-edition/the-stack-and-the-heap.html
 9) https://doc.rust-lang.org/book/ch04-01-what-is-ownership.html#the-stack-and-the-heap
+10) https://users.rust-lang.org/t/how-do-i-copy-clone-a-string-including-the-heap/93223
+** อธิบายตัว model เข้าใจง่ายมาก ทั้ง .clone ทั้งการยืมของในส่วน stack และ heap เลย **
