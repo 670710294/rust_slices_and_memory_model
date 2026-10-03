@@ -98,12 +98,13 @@ fn main(){
 ```
 **Explanation**
 
-`เริ่มที่ตัว s จะสร้างก้อนheap ที่เก็บคำว่า ['H' , 'e' , 'l' , 'l' , 'o']ไว้ แล้วจะเก็บค่าใน stack เป็น pointer + len + capacity โดย pointer จะชี้ไปที่ก้อน heap`  
+`เริ่มที่ตัว s จะสร้างก้อนheap ที่เก็บคำว่า ['H' , 'e' , 'l' , 'l' , 'o']ไว้ แล้วจะเก็บค่าใน stack เป็น pointer + len + capacity `
+`โดย pointer จะชี้ไปที่ก้อน heap`  
 `ส่วน myVec ก็จะทำงานในทำนองเดียวกัน`  
 
 ---
 
-### 4.3 `[Concept 3]`
+### 4.3 `[Slice]`
 
 `[อธิบายแนวคิด]`
 
@@ -113,25 +114,6 @@ fn main(){
 
 ---
 
-### 4.4 `[Concept 4 — ถ้ามี]`
-
-`[อธิบายแนวคิด]`
-
-```rust
-// Rust code
-```
-
----
-
-### 4.5 `[Concept 5 — ถ้ามี]`
-
-`[อธิบายแนวคิด]`
-
-```rust
-// Rust code
-```
-
----
 
 ## 5. Important Syntax / Rules
 
