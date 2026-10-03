@@ -40,6 +40,7 @@
 3) [Slicing ช่วยให้ลดการจองพื้นที่ Ram แบบไม่จำเป็นทิ้งไป]  
 
 `ส่วนในพาร์ทของ Memory Model ใน Rust จะมี Stack + Heap`  
+`โดย Memory Model : ชุดการจัดเก็บข้อมูล/ตัวแปร การใช้งาน การคืนความจำ โดยใช้หลัก Ownership , Borrowing  และ Lifetime`
 1) `Stack ใช้ Concept แบบ LIFO`  
 `จะเก็บค่าตัวแปรที่รู้ขนาดแน่นอนเท่านั้น เช่น integer,อาเรย์ที่กำหนดขนาดแล้ว`  
 2) `Heap ใช้เก็บค่าตัวแปรที่ไม่ทราบขนาดแน่นอน ( เพิ่มขึ้นหรือลดลงได้ตอน Compile )`  
@@ -68,33 +69,37 @@
 **ตัวอย่าง**
 
 ```rust
-fn main() {
-    let x = 2;
-    let y = x;
+fn main(){
+    let x = 60;
+    let y = 7;
+    let z = x + y;
 }
 ```
 
 **Explanation**
 
-`[ตัว Memory Model ของภาษา rust จะเก็บค่า x เข้าไปใน stack ก่อน และให้มันมีค่าเป็น 2]`  
-`[จากนั้น Memory ของภาษา rust จะ Copy ค่าของ x เพื่อเก็บเข้าไปในตัวแปร y]`  
+`[ตัว Memory Model ของภาษา rust จะเก็บค่า x และ y เข้าไปใน stack ก่อน และให้มันมีค่าเป็น 60 และ 7 ตามลำดับ]`  
+`[จากนั้น Memory ของภาษา rust จะ อ่านค่า x และ y นำมาบวกกันแล้วเก็บเข้าไปในค่า z ของ stack]`  
 
 
 ---
 
-### 4.2 `[Concept 2]`
+### 4.2 `[Memory Model ของ Heap]`
 
-`[อธิบายแนวคิด]`
+`[Heap จะเป็นก้อนเก็บข้อมูลก้อนนึง สำหรับตัวแปรที่ยืดหยุ่นเรื่องขนาดระหว่างการคอมไพล์ โดยตัวแปรเหล่านั้นจะมีทั้งเก็บค่าไว้ที่ stack และ heap]`
+`[โดยหลักๆจะแบ่งเป็น 2 ประเภท 1.เก็บค่าใน stack เป็น thin pointer , 2.เก็บค่าใน stack เป็น fat pointer เพื่อชี้ข้อมูลไปที่ ก้อนใน heap]`
 
 ```rust
-fn main() {
-    let age = 25;
-
-    let name = String::from("Alice");
-
-    let skills = vec![String::from("Rust"), String::from("C++")];
+fn main(){
+    let s = String::from("Hello");
+    let myVec = vec![1, 2, 3, 5];
 }
 ```
+**Explanation**
+
+`เริ่มที่ตัว s จะสร้างก้อนheap ที่เก็บคำว่า ['H' , 'e' , 'l' , 'l' , 'o']ไว้ แล้วจะเก็บค่าใน stack เป็น pointer + len + capacity `
+`โดย pointer จะชี้ไปที่ก้อน heap`  
+`ส่วน myVec ก็จะทำงานในทำนองเดียวกัน`  
 
 ---
 
@@ -125,28 +130,6 @@ fn main() {
 
 }
 ```
-
----
-
-### 4.4 `[Concept 4 — ถ้ามี]`
-
-`[อธิบายแนวคิด]`
-
-```rust
-// Rust code
-```
-
----
-
-### 4.5 `[Concept 5 — ถ้ามี]`
-
-`[อธิบายแนวคิด]`
-
-```rust
-// Rust code
-```
-
----
 
 ## 5. Important Syntax / Rules
 
